@@ -10,6 +10,7 @@ TagManager:
   - Buyable Path
   - Grass Tiles
   - Tower
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Projectile
   - Tower
   - Farm
-  - Walls
+  - Obstacle
   - Camera
   - 
   - 

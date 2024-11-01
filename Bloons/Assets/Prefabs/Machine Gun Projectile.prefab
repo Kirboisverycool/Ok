@@ -152,7 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectileSpeed: 50
-  projectileDamage: 1
+  deathTime: 10
+  hitSoundClip: {fileID: 8300000, guid: 6742b63c70fe1444dae7fdd125c79c5b, type: 3}
 --- !u!54 &1012729333803444363
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] int maxHitPoints = 5;
     [SerializeField] int shieldSystem;
+    [SerializeField] AudioClip damageSoundClip;
 
     WaveHandler waveHandler;
     Enemy enemy;
@@ -42,6 +43,7 @@ public class EnemyHealth : MonoBehaviour
         if(shieldSystem <= shieldDamage)
         {
             currentHitPoints -= damage;
+            SFXManager.instance.PlaySFXClip(damageSoundClip, transform, 1f);
         }
 
         if (currentHitPoints <= 0)

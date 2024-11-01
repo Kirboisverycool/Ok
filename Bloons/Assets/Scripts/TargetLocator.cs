@@ -18,6 +18,8 @@ public class TargetLocator : MonoBehaviour
     [SerializeField] Transform firePoint;
     [SerializeField] Transform parent;
     [SerializeField] GameObject projectilePrefab;
+    [SerializeField] AudioClip shootingSoundClip;
+    [SerializeField] float volume = 0.5f;
     private float fireCountdown = 0f;
 
     public GameObject GetProjectilePrefab()
@@ -92,6 +94,8 @@ public class TargetLocator : MonoBehaviour
     {
         if(distance <= towerRange)
         {
+            SFXManager.instance.PlaySFXClip(shootingSoundClip, transform, volume);
+
             GameObject projectileGO = (GameObject)Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
 
             projectileGO.transform.SetParent(parent.transform);

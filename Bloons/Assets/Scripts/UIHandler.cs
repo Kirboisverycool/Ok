@@ -1,14 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
-using UnityEditor.Rendering;
 using System;
+using UnityEngine.UI;
 
 public class UIHandler : MonoBehaviour
 {
-    [SerializeField] List<Image> towerImages = new List<Image>();
+    [SerializeField] List<Image> towerButtons = new List<Image>();
 
     BuildTower buildTower;
 
@@ -27,15 +25,48 @@ public class UIHandler : MonoBehaviour
         FarmImage();
     }
 
+    public void TurretButton()
+    {
+        if (towerButtons[0])
+        {
+            buildTower.TurretIndex = 0;
+            TurretImage();
+        }
+    }
+    public void SniperButton()
+    {
+        if (towerButtons[1])
+        {
+            buildTower.TurretIndex = 1;
+            SniperImage();
+        }
+    }
+    public void MachineGunButton()
+    {
+        if (towerButtons[2])
+        {
+            buildTower.TurretIndex = 2;
+            MachineGunImage();
+        }
+    }
+    public void FarmButton()
+    {
+        if (towerButtons[3])
+        {
+            buildTower.TurretIndex = 3;
+            FarmImage();
+        }
+    }
+
     private void TurretImage()
     {
         if (buildTower.TurretIndex == 0)
         {
-            towerImages[0].color = Color.grey;
+            towerButtons[0].color = Color.grey;
         }
         else
         {
-            towerImages[0].color = Color.white;
+            towerButtons[0].color = Color.white;
         }
     }
 
@@ -43,11 +74,11 @@ public class UIHandler : MonoBehaviour
     {
         if (buildTower.TurretIndex == 1)
         {
-            towerImages[1].color = Color.grey;
+            towerButtons[1].color = Color.grey;
         }
         else
         {
-            towerImages[1].color = Color.white;
+            towerButtons[1].color = Color.white;
         }
     }
 
@@ -55,11 +86,11 @@ public class UIHandler : MonoBehaviour
     {
         if (buildTower.TurretIndex == 2)
         {
-            towerImages[2].color = Color.grey;
+            towerButtons[2].color = Color.grey;
         }
         else
         {
-            towerImages[2].color = Color.white;
+            towerButtons[2].color = Color.white;
         }
     }
 
@@ -67,11 +98,12 @@ public class UIHandler : MonoBehaviour
     {
         if (buildTower.TurretIndex == 3)
         {
-            towerImages[3].color = Color.grey;
+            towerButtons[3].color = Color.grey;
         }
         else
         {
-            towerImages[3].color = Color.white;
+            towerButtons[3].color = Color.white;
         }
     }
+
 }

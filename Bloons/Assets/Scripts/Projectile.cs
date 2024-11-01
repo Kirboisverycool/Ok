@@ -5,6 +5,8 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     [SerializeField] float projectileSpeed;
+    [SerializeField] float deathTime = 10f;
+    [SerializeField] AudioClip hitSoundClip;
 
     TargetLocator targetLocator;
     Transform target;
@@ -12,6 +14,7 @@ public class Projectile : MonoBehaviour
     private void Start()
     {
         targetLocator = GetComponentInParent<TargetLocator>();
+        Destroy(gameObject, deathTime);
     }
 
     public void Seek(Transform _target)
@@ -47,6 +50,11 @@ public class Projectile : MonoBehaviour
         {
             enemy.TakeHit(targetLocator.damage, targetLocator.shieldDamage);
             Destroy(gameObject);
+        }
+        if (collision.CompareTag("Obstacle"))
+        {
+            Destroy(gameObject);
+            SFXManager.instance.PlaySFXClip(hitSoundClip, transform, 1f);
         }
     }
 }

@@ -87,6 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHitPoints: 5
   shieldSystem: 1
+  damageSoundClip: {fileID: 8300000, guid: 6742b63c70fe1444dae7fdd125c79c5b, type: 3}
   currentHitPoints: 0
 --- !u!114 &-3869816434560366137
 MonoBehaviour:

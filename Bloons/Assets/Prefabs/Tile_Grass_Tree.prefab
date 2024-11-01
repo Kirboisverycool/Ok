@@ -52,9 +52,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8781856424278369147, guid: 7fb8d74871fa9c74cab9389cd54e2860, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9072630317142026588, guid: 7fb8d74871fa9c74cab9389cd54e2860, type: 3}
       propertyPath: m_Name
       value: Tree_Group
+      objectReference: {fileID: 0}
+    - target: {fileID: 9072630317142026588, guid: 7fb8d74871fa9c74cab9389cd54e2860, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -80,7 +88,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 797464961205533940, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 797464961205533940, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -88,7 +96,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 797464961205533940, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 797464961205533940, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -122,13 +130,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tile_Grass_Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 1116660413612284217, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116660413612284217, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     - target: {fileID: 5606423918933775299, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
       propertyPath: isPlaceable
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8090020120397056222, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
       propertyPath: m_text
-      value: 0, 0
+      value: 6, 4
       objectReference: {fileID: 0}
     - target: {fileID: 8090020120397056222, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
       propertyPath: m_fontColor.r
@@ -140,8 +156,43 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 797464961205533940, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7836809401145680194}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1116660413612284217, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3939702243254258505}
   m_SourcePrefab: {fileID: 100100000, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
+--- !u!1 &7612508671974869513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1116660413612284217, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
+  m_PrefabInstance: {fileID: 7411303169197429552}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &3939702243254258505
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7612508671974869513}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 14
+  m_CollisionDetection: 1
 --- !u!4 &7911442317570256836 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 797464961205533940, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}

@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 594298947515259038, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: towerRange
-      value: 70
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 594298947515259038, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: projectilePrefab
@@ -30,11 +30,11 @@ PrefabInstance:
       objectReference: {fileID: 6454224513027657523, guid: 0edebf158bb7b614a8c5d9fd01f31566, type: 3}
     - target: {fileID: 3049131714819384361, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3049131714819384361, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 49.276184
       objectReference: {fileID: 0}
     - target: {fileID: 3049131714819384361, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3049131714819384361, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -39.405888
       objectReference: {fileID: 0}
     - target: {fileID: 3049131714819384361, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: m_LocalRotation.w

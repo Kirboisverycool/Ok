@@ -30,6 +30,8 @@ public class Tower : MonoBehaviour
     [SerializeField] int shieldDamageUpgrade = 2;
     [SerializeField] Projectile projectile;
 
+    [Header("Water Tower Upgrades")]
+
     [Header("Farm Upgrades")]
     [SerializeField] int goldRecievedUpgrade = 1;
     [SerializeField] float generatingCooldownUpgrade = 0.3f;
