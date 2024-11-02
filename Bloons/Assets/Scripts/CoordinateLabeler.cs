@@ -65,8 +65,8 @@ public class CoordinateLabeler : MonoBehaviour
 
     private void DisplayCoordinates()
     {
-        cooridantes.x = Mathf.RoundToInt(transform.parent.position.x / UnityEditor.EditorSnapSettings.move.x);
-        cooridantes.y = Mathf.RoundToInt(transform.parent.position.z / UnityEditor.EditorSnapSettings.move.z);
+        cooridantes.x = Mathf.RoundToInt(transform.parent.position.x /*/ UnityEditor.EditorSnapSettings.move.x*/);
+        cooridantes.y = Mathf.RoundToInt(transform.parent.position.z /*/ UnityEditor.EditorSnapSettings.move.z*/);
         
         label.text = cooridantes.x + ", " + cooridantes.y;
     }

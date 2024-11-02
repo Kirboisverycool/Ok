@@ -9,7 +9,7 @@ using UnityEngine;
 
 public class BuyableLand : MonoBehaviour
 {
-    [SerializeField] bool isBuyableLand = true;
+    [SerializeField] public bool isBuyableLand = true;
     [SerializeField] List<Waypoint> waypoints = new List<Waypoint>();
     [SerializeField] List<BuyableLand> buyableLands = new List<BuyableLand>();
     [SerializeField] int cost = 10;

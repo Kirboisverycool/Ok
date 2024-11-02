@@ -44,7 +44,7 @@ public class BuildTower : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            TurretIndex = 9;
+            TurretIndex = 10;
         }
     }
 }
