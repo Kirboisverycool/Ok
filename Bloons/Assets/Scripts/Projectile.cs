@@ -48,7 +48,7 @@ public class Projectile : MonoBehaviour
 
         if(enemy)
         {
-            enemy.TakeHit(targetLocator.damage, targetLocator.shieldDamage);
+            enemy.TakeHit(targetLocator.damage, targetLocator.shieldDamage, targetLocator.slowDownAmount, targetLocator.slowDownTime);
             Destroy(gameObject);
         }
         if (collision.CompareTag("Obstacle"))

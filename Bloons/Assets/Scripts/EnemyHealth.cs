@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,9 +9,13 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] int maxHitPoints = 5;
     [SerializeField] int shieldSystem;
     [SerializeField] AudioClip damageSoundClip;
+    public float enemySlowDownTime;
+    [SerializeField] bool isSlowed = false;
+    float maxSpeed;
 
     WaveHandler waveHandler;
     Enemy enemy;
+    EnemyMover enemyMover;
     [SerializeField] int currentHitPoints = 0;
 
     // Start is called before the first frame update
@@ -19,12 +24,30 @@ public class EnemyHealth : MonoBehaviour
         currentHitPoints = maxHitPoints;
         enemy = GetComponent<Enemy>();
         waveHandler = GetComponentInParent<WaveHandler>();
+        enemyMover = GetComponent<EnemyMover>();
+
+        maxSpeed = enemyMover.speed;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        SlowDown();
+    }
+
+    private void SlowDown()
+    {
+        if(isSlowed) 
+        {
+            enemySlowDownTime -= Time.deltaTime;
+        }
+
+        if(enemySlowDownTime <= 0)
+        {
+            isSlowed = false;
+            enemyMover.speed = maxSpeed;
+            enemySlowDownTime = 0;
+        }
     }
 
     /*private void OnParticleCollision(GameObject other)
@@ -38,12 +61,20 @@ public class EnemyHealth : MonoBehaviour
         }
     }*/
 
-    public void TakeHit(int damage, int shieldDamage)
+    public void TakeHit(int damage, int shieldDamage, float slowDown, float slowDownTime)
     {
         if(shieldSystem <= shieldDamage)
         {
             currentHitPoints -= damage;
             SFXManager.instance.PlaySFXClip(damageSoundClip, transform, 1f);
+        }
+
+        if(slowDown != 1 && isSlowed == false) 
+        {
+            enemySlowDownTime = 0;
+            enemySlowDownTime = slowDownTime;
+            enemyMover.speed /= slowDown;
+            isSlowed = true;
         }
 
         if (currentHitPoints <= 0)

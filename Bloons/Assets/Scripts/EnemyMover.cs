@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Enemy))]
 public class EnemyMover : MonoBehaviour
 {
-    [SerializeField] float speed = 1f;
+    [SerializeField] public float speed = 1f;
     [SerializeField] List<Waypoint> path = new List<Waypoint>();
     [SerializeField] int enemyDamage = 10;
 

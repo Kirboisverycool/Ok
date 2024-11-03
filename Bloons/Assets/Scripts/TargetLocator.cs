@@ -15,6 +15,8 @@ public class TargetLocator : MonoBehaviour
     [SerializeField] public int damage;
     [SerializeField] public int shieldDamage = 1;
     [SerializeField] public float towerRange;
+    [SerializeField] public float slowDownAmount = 1f;
+    [SerializeField] public float slowDownTime = 2f;
     [SerializeField] Transform firePoint;
     [SerializeField] Transform parent;
     [SerializeField] GameObject projectilePrefab;
