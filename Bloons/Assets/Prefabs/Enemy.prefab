@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89d44b94dbf16147b1fe24992b4aace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.5
   path: []
   enemyDamage: 10
 --- !u!65 &9038669916424289036
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aa48f832d7aa7740a6f9f85ee249b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldReward: 5
+  goldReward: 10
   goldPenalty: 5
 --- !u!54 &6563162354257407317
 Rigidbody:

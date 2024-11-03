@@ -49,12 +49,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlaceable: 1
   hasTower: 0
+  isWaterTile: 0
   towers:
   - {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
   - {fileID: 2840850920586239870, guid: a627b58e64d2ab2429c7d9b0088954e7, type: 3}
   - {fileID: 2616373633862329257, guid: ac4b02bb7c0825f45aa06875300c36b1, type: 3}
+  - {fileID: 527844740972048842, guid: 0071e81f12f13bb459cda0609c2e7e57, type: 3}
   - {fileID: 5807689517115536345, guid: 9195aa3bbc062e44895ac09a92c29174, type: 3}
-  towerBuySoundClip: {fileID: 8300000, guid: 3b5b2e147b1a2bf4ca2dfd54d363d261, type: 3}
 --- !u!65 &7471182529070720578
 BoxCollider:
   m_ObjectHideFlags: 0

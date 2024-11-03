@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class BuildTower : MonoBehaviour
 {
-    public int TurretIndex = 0;
+    public int turretIndex = 0;
 
     public int GetTurretIndex()
     {
-        return TurretIndex;
+        return turretIndex;
     }
 
     // Start is called before the first frame update
@@ -28,23 +28,27 @@ public class BuildTower : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Alpha1))
         {
-            TurretIndex = 0;
+            turretIndex = 0;
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            TurretIndex = 1;
+            turretIndex = 1;
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            TurretIndex = 2;
+            turretIndex = 2;
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            TurretIndex = 3;
+            turretIndex = 3;
+        }
+        if(Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            turretIndex = 4;
         }
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            TurretIndex = 10;
+            turretIndex = 10;
         }
     }
 }

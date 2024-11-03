@@ -36,6 +36,8 @@ public class Tower : MonoBehaviour
     [SerializeField] int goldRecievedUpgrade = 1;
     [SerializeField] float generatingCooldownUpgrade = 0.3f;
 
+    [SerializeField] AudioClip towerBuySoundClip;
+
     MoneyMachine moneyMachine;
     Bank bank;
     Outline outline;
@@ -56,6 +58,7 @@ public class Tower : MonoBehaviour
         {
             var twr = Instantiate(tower.gameObject, position, Quaternion.identity);
             twr.GetComponent<Tower>().tilePlaced = tile;
+            SFXManager.instance.PlaySFXClip(towerBuySoundClip, transform, 1f);
             bank.Withdraw(cost);
             return true;
         }

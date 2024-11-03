@@ -510,11 +510,13 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  cost: 10
+  buyableLands: []
+  cost: 1000
   costIncrease: 5
   highlight: {fileID: 757894362699730140}
   costText: {fileID: 6205009789088453825}
   enemyMovers: []
+  landLock: {fileID: 0}
 --- !u!65 &6907278373007674456
 BoxCollider:
   m_ObjectHideFlags: 0

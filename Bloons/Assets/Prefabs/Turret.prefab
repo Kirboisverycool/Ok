@@ -343,26 +343,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef7a05cb6ae7d764ea28446607d07077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 5
-  sellGoldAmount: 2
+  cost: 100
+  sellGoldAmount: 50
   towerUpgrades:
   - {fileID: 2893089790459669499}
   - {fileID: 418460874124930270}
   - {fileID: 4984938868163879157}
   - {fileID: 6107452736433584197}
   towerCanvas: {fileID: 2168257898026609217}
-  upgradeCost: 3
-  upgradeCostIncrease: 5
+  upgradeCost: 100
+  upgradeCostIncrease: 50
   maxUpgrade: 5
   currentUpgradeAmount: 0
   tilePlaced: {fileID: 0}
   damageUpgrade: 1
-  fireRateUpgrade: 0.4
+  fireRateUpgrade: 0.2
   rangeUpgrade: 0.4
   shieldDamageUpgrade: 2
   projectile: {fileID: 9222354630919792954, guid: 7362a7dc6d14d7748953ae63138db72f, type: 3}
   goldRecievedUpgrade: 1
   generatingCooldownUpgrade: 0.3
+  towerBuySoundClip: {fileID: 8300000, guid: 3b5b2e147b1a2bf4ca2dfd54d363d261, type: 3}
 --- !u!65 &303524105815066999
 BoxCollider:
   m_ObjectHideFlags: 0

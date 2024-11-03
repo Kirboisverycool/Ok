@@ -29,7 +29,7 @@ public class UIHandler : MonoBehaviour
     {
         if (towerButtons[0])
         {
-            buildTower.TurretIndex = 0;
+            buildTower.turretIndex = 0;
             TurretImage();
         }
     }
@@ -37,7 +37,7 @@ public class UIHandler : MonoBehaviour
     {
         if (towerButtons[1])
         {
-            buildTower.TurretIndex = 1;
+            buildTower.turretIndex = 1;
             SniperImage();
         }
     }
@@ -45,7 +45,7 @@ public class UIHandler : MonoBehaviour
     {
         if (towerButtons[2])
         {
-            buildTower.TurretIndex = 2;
+            buildTower.turretIndex = 2;
             MachineGunImage();
         }
     }
@@ -53,14 +53,14 @@ public class UIHandler : MonoBehaviour
     {
         if (towerButtons[3])
         {
-            buildTower.TurretIndex = 3;
+            buildTower.turretIndex = 3;
             FarmImage();
         }
     }
 
     private void TurretImage()
     {
-        if (buildTower.TurretIndex == 0)
+        if (buildTower.turretIndex == 0)
         {
             towerButtons[0].color = Color.grey;
         }
@@ -72,7 +72,7 @@ public class UIHandler : MonoBehaviour
 
     private void SniperImage()
     {
-        if (buildTower.TurretIndex == 1)
+        if (buildTower.turretIndex == 1)
         {
             towerButtons[1].color = Color.grey;
         }
@@ -84,7 +84,7 @@ public class UIHandler : MonoBehaviour
 
     private void MachineGunImage()
     {
-        if (buildTower.TurretIndex == 2)
+        if (buildTower.turretIndex == 2)
         {
             towerButtons[2].color = Color.grey;
         }
@@ -96,7 +96,7 @@ public class UIHandler : MonoBehaviour
 
     private void FarmImage()
     {
-        if (buildTower.TurretIndex == 3)
+        if (buildTower.turretIndex == 3)
         {
             towerButtons[3].color = Color.grey;
         }

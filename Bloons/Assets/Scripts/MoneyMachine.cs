@@ -7,13 +7,22 @@ public class MoneyMachine : MonoBehaviour
 {
     [SerializeField] public int goldAmount = 5;
     [SerializeField] public float generatingCooldown;
-    bool isRunning = true;
+    [SerializeField] AudioClip moneySoundClip;
+
+    bool isRunning = false;
     Bank bank;
 
     // Start is called before the first frame update
     void Start()
     {
         bank = FindObjectOfType<Bank>();
+        StartCoroutine(StartIsRunning());
+    }
+
+    private IEnumerator StartIsRunning()
+    {
+        yield return new WaitForSeconds(generatingCooldown);
+        isRunning = true;
     }
 
     // Update is called once per frame
@@ -28,6 +37,7 @@ public class MoneyMachine : MonoBehaviour
         {
             bank.Deposit(goldAmount);
             isRunning = false;
+            SFXManager.instance.PlaySFXClip(moneySoundClip, transform, 1f);
             yield return new WaitForSeconds(generatingCooldown);
             isRunning = true;
         }   
