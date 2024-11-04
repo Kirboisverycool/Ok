@@ -9,11 +9,13 @@ public class Projectile : MonoBehaviour
     [SerializeField] AudioClip hitSoundClip;
 
     TargetLocator targetLocator;
+    AoeProjectile aoeProjectile;
     Transform target;
 
     private void Start()
     {
         targetLocator = GetComponentInParent<TargetLocator>();
+        aoeProjectile = GetComponent<AoeProjectile>();
         Destroy(gameObject, deathTime);
     }
 
@@ -49,6 +51,10 @@ public class Projectile : MonoBehaviour
         if(enemy)
         {
             enemy.TakeHit(targetLocator.damage, targetLocator.shieldDamage, targetLocator.slowDownAmount, targetLocator.slowDownTime);
+            if(aoeProjectile != null)
+            {
+                aoeProjectile.AoeDamage();
+            }
             Destroy(gameObject);
         }
         if (collision.CompareTag("Obstacle"))

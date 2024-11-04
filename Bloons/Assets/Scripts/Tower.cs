@@ -31,6 +31,8 @@ public class Tower : MonoBehaviour
     [SerializeField] Projectile projectile;
 
     [Header("Water Tower Upgrades")]
+    [SerializeField] float slowDownAmountUpgrade = 0.5f;
+    [SerializeField] float slowDownTimeUpgrade = 0.2f;
 
     [Header("Farm Upgrades")]
     [SerializeField] int goldRecievedUpgrade = 1;
@@ -119,7 +121,26 @@ public class Tower : MonoBehaviour
 
     private void ShowStats()
     {
-        if(gameObject.layer == 8)
+        if (gameObject.layer == 9)
+        {
+            if (upgradeUIIsActive)
+            {
+                towerUpgrades[0].text = "Damage: " + targetLocator.damage;
+                towerUpgrades[1].text = "Fire Rate: " + targetLocator.GetFireRate();
+                towerUpgrades[2].text = "Range: " + targetLocator.GetTowerRange();
+                towerUpgrades[3].text = "Slow Down Amount " + targetLocator.slowDownAmount;
+                towerUpgrades[4].text = "Slow Down Amount " + targetLocator.slowDownTime;
+                if (currentUpgradeAmount < maxUpgrade)
+                {
+                    towerUpgrades[5].text = "Upgrade Cost: " + upgradeCost;
+                }
+                else
+                {
+                    towerUpgrades[5].text = "";
+                }
+            }
+        }
+        if (gameObject.layer == 8)
         {
             if(upgradeUIIsActive)
             {
@@ -181,6 +202,21 @@ public class Tower : MonoBehaviour
                     moneyMachine.generatingCooldown -= generatingCooldownUpgrade;
                     upgradeCost += upgradeCostIncrease;
                     currentUpgradeAmount++;
+                }
+                if (gameObject.layer == 9)
+                {
+                    bank.Withdraw(upgradeCost);
+                    targetLocator.damage += damageUpgrade;
+                    targetLocator.fireRate += fireRateUpgrade;
+                    targetLocator.towerRange += rangeUpgrade;
+                    targetLocator.slowDownTime += slowDownTimeUpgrade;
+                    targetLocator.slowDownAmount += slowDownAmountUpgrade;
+                    upgradeCost += upgradeCostIncrease;
+                    currentUpgradeAmount++;
+                    if (currentUpgradeAmount == 5)
+                    {
+                        targetLocator.shieldDamage += shieldDamageUpgrade;
+                    }
                 }
             }
             if (Input.GetKeyDown(KeyCode.X))

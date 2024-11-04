@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -3151654895745191344}
   - component: {fileID: -3869816434560366137}
   - component: {fileID: 6563162354257407317}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,6 +88,8 @@ MonoBehaviour:
   maxHitPoints: 5
   shieldSystem: 1
   damageSoundClip: {fileID: 8300000, guid: 6742b63c70fe1444dae7fdd125c79c5b, type: 3}
+  enemySlowDownTime: 0
+  isSlowed: 0
   currentHitPoints: 0
 --- !u!114 &-3869816434560366137
 MonoBehaviour:

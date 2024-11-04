@@ -21,10 +21,10 @@ TagManager:
   - Projectile
   - Tower
   - Farm
-  - Obstacle
+  - Water
   - Camera
-  - 
-  - 
+  - Enemy
+  - Obstacle
   - 
   - 
   - 

@@ -22,6 +22,7 @@ public class UIHandler : MonoBehaviour
         TurretImage();
         SniperImage();
         MachineGunImage();
+        WaterTurretImage();
         FarmImage();
     }
 
@@ -49,11 +50,19 @@ public class UIHandler : MonoBehaviour
             MachineGunImage();
         }
     }
-    public void FarmButton()
+    public void WaterTurretButton()
     {
         if (towerButtons[3])
         {
             buildTower.turretIndex = 3;
+            WaterTurretImage();
+        }
+    }
+    public void FarmButton()
+    {
+        if (towerButtons[4])
+        {
+            buildTower.turretIndex = 4;
             FarmImage();
         }
     }
@@ -93,8 +102,7 @@ public class UIHandler : MonoBehaviour
             towerButtons[2].color = Color.white;
         }
     }
-
-    private void FarmImage()
+    private void WaterTurretImage()
     {
         if (buildTower.turretIndex == 3)
         {
@@ -103,6 +111,18 @@ public class UIHandler : MonoBehaviour
         else
         {
             towerButtons[3].color = Color.white;
+        }
+    }
+
+    private void FarmImage()
+    {
+        if (buildTower.turretIndex == 4)
+        {
+            towerButtons[4].color = Color.grey;
+        }
+        else
+        {
+            towerButtons[4].color = Color.white;
         }
     }
 

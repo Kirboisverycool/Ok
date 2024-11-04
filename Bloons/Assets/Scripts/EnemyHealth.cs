@@ -33,6 +33,13 @@ public class EnemyHealth : MonoBehaviour
     void Update()
     {
         SlowDown();
+
+        if (currentHitPoints <= 0)
+        {
+            Destroy(gameObject);
+            waveHandler.waves[waveHandler.GetCurrentWaveIndex()].enemiesLeft--;
+            enemy.RewardGold();
+        }
     }
 
     private void SlowDown()
@@ -76,12 +83,21 @@ public class EnemyHealth : MonoBehaviour
             enemyMover.speed /= slowDown;
             isSlowed = true;
         }
-
-        if (currentHitPoints <= 0)
-        {
-            Destroy(gameObject);
-            waveHandler.waves[waveHandler.GetCurrentWaveIndex()].enemiesLeft--;
-            enemy.RewardGold();
-        }
     }
+
+    /*public void AoeHit(int aoeDamage, int aoeShieldDamage, float slowDown, float slowDownTime)
+    {
+        if (shieldSystem <= aoeShieldDamage)
+        {
+            currentHitPoints -= aoeDamage;
+            SFXManager.instance.PlaySFXClip(damageSoundClip, transform, 1f);
+        }
+        if (slowDown != 1 && isSlowed == false)
+        {
+            enemySlowDownTime = 0;
+            enemySlowDownTime = slowDownTime;
+            enemyMover.speed /= slowDown;
+            isSlowed = true;
+        }
+    }*/
 }
