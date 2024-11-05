@@ -33,6 +33,14 @@ PrefabInstance:
       value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 594298947515259038, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: maxHitCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 594298947515259038, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: shieldDamage
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 594298947515259038, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: projectilePrefab
       value: 
       objectReference: {fileID: 6454224513027657523, guid: 0edebf158bb7b614a8c5d9fd01f31566, type: 3}

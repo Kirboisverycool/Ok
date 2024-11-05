@@ -9,6 +9,7 @@ public class EnemyMover : MonoBehaviour
     [SerializeField] public float speed = 1f;
     [SerializeField] List<Waypoint> path = new List<Waypoint>();
     [SerializeField] int enemyDamage = 10;
+    [SerializeField] float yOffset = 2f;
 
     Health health;
     WaveHandler waveHandler;

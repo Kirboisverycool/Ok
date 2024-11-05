@@ -52,6 +52,7 @@ MonoBehaviour:
   speed: 0.5
   path: []
   enemyDamage: 10
+  yOffset: 0
 --- !u!65 &9038669916424289036
 BoxCollider:
   m_ObjectHideFlags: 0
