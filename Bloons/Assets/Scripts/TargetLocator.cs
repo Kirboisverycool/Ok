@@ -17,12 +17,19 @@ public class TargetLocator : MonoBehaviour
     [SerializeField] public float towerRange;
     [SerializeField] public float slowDownAmount = 1f;
     [SerializeField] public float slowDownTime = 2f;
+    [SerializeField] public int maxHitCount;
     [SerializeField] Transform firePoint;
     [SerializeField] Transform parent;
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] AudioClip shootingSoundClip;
     [SerializeField] float volume = 0.5f;
+    float thing = 0f;
+
+    [SerializeField] public int hitCount;
+
     private float fireCountdown = 0f;
+
+    Vector3 newTarget;
 
     public GameObject GetProjectilePrefab()
     {
@@ -54,6 +61,7 @@ public class TargetLocator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        thing = 0;
         FindClosestTarget();
         AimWeapon();
     }
@@ -81,6 +89,7 @@ public class TargetLocator : MonoBehaviour
     private void AimWeapon()
     {
         //Attack(distance <= towerRange);
+
         weapon.LookAt(target);
 
         if(fireCountdown <= 0f)

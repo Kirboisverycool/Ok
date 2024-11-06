@@ -326,11 +326,15 @@ MonoBehaviour:
   damage: 1
   shieldDamage: 1
   towerRange: 25
+  slowDownAmount: 1
+  slowDownTime: 2
+  maxHitCount: 1
   firePoint: {fileID: 6576528555559247076}
   parent: {fileID: 3049131714819384361}
   projectilePrefab: {fileID: 6454224513027657523, guid: 7362a7dc6d14d7748953ae63138db72f, type: 3}
   shootingSoundClip: {fileID: 8300000, guid: 42899963d5a836045ab3884b0d73461f, type: 3}
   volume: 0.5
+  hitCount: 0
 --- !u!114 &-1879724987132364427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,6 +365,8 @@ MonoBehaviour:
   rangeUpgrade: 0.4
   shieldDamageUpgrade: 2
   projectile: {fileID: 9222354630919792954, guid: 7362a7dc6d14d7748953ae63138db72f, type: 3}
+  slowDownAmountUpgrade: 0.5
+  slowDownTimeUpgrade: 0.2
   goldRecievedUpgrade: 1
   generatingCooldownUpgrade: 0.3
   towerBuySoundClip: {fileID: 8300000, guid: 3b5b2e147b1a2bf4ca2dfd54d363d261, type: 3}
