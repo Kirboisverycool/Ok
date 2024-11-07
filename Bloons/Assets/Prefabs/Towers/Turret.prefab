@@ -360,7 +360,7 @@ MonoBehaviour:
   maxUpgrade: 5
   currentUpgradeAmount: 0
   tilePlaced: {fileID: 0}
-  damageUpgrade: 1
+  damageUpgrade: 0.5
   fireRateUpgrade: 0.2
   rangeUpgrade: 0.4
   shieldDamageUpgrade: 2

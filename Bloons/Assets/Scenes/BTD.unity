@@ -21290,6 +21290,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1028728266889924511, guid: b82b8445c09d4cc4db47f8e3867e9d07, type: 3}
+      propertyPath: startingBalance
+      value: 10000000
+      objectReference: {fileID: 0}
     - target: {fileID: 2120200542318449275, guid: b82b8445c09d4cc4db47f8e3867e9d07, type: 3}
       propertyPath: m_Name
       value: Bank

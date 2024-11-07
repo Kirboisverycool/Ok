@@ -17,6 +17,10 @@ PrefabInstance:
       value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: damageUpgrade
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: sellGoldAmount
       value: 750
       objectReference: {fileID: 0}
@@ -28,6 +32,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: 5516e695104a0dc4e8bbdae3cd9fd399, type: 3}
+    - target: {fileID: 594298947515259038, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: damage
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 594298947515259038, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: fireRate
       value: 2.5

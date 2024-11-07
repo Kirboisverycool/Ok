@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Enemy))]
 public class EnemyHealth : MonoBehaviour
 {
-    [SerializeField] int maxHitPoints = 5;
+    [SerializeField] float maxHitPoints = 5;
     [SerializeField] int shieldSystem;
     [SerializeField] AudioClip damageSoundClip;
     public float enemySlowDownTime;
@@ -16,7 +16,7 @@ public class EnemyHealth : MonoBehaviour
     WaveHandler waveHandler;
     Enemy enemy;
     EnemyMover enemyMover;
-    [SerializeField] int currentHitPoints = 0;
+    [SerializeField] float currentHitPoints = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -68,7 +68,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }*/
 
-    public void TakeHit(int damage, int shieldDamage, float slowDown, float slowDownTime)
+    public void TakeHit(float damage, int shieldDamage, float slowDown, float slowDownTime)
     {
         if(shieldSystem <= shieldDamage)
         {

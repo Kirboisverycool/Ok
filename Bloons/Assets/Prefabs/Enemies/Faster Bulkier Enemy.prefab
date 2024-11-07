@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &1811547976985449305
+--- !u!1001 &5773597849707330753
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,15 +10,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3151654895745191344, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
       propertyPath: maxHitPoints
-      value: 1.5
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -3151654895745191344, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
+      propertyPath: shieldSystem
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2586615396026993599, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
       propertyPath: m_Name
-      value: Fast Enemy
+      value: Faster Bulkier Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5867322863960311526, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
       propertyPath: speed
-      value: 1.2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9027240394253478943, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
       propertyPath: m_RootOrder

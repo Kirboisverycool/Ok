@@ -86,7 +86,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88ef6b1594ea57d4e97db8fcbdd80321, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHitPoints: 5
+  maxHitPoints: 2.5
   shieldSystem: 1
   damageSoundClip: {fileID: 8300000, guid: 6742b63c70fe1444dae7fdd125c79c5b, type: 3}
   enemySlowDownTime: 0
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aa48f832d7aa7740a6f9f85ee249b3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldReward: 10
+  goldReward: 15
   goldPenalty: 5
 --- !u!54 &6563162354257407317
 Rigidbody:

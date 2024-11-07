@@ -24,7 +24,7 @@ public class Tower : MonoBehaviour
     public GameObject tilePlaced;
 
     [Header("Tower Upgrades")]
-    [SerializeField] int damageUpgrade = 1;
+    [SerializeField] float damageUpgrade = 1;
     [SerializeField] float fireRateUpgrade = 0.2f;
     [SerializeField] float rangeUpgrade = 0.2f;
     [SerializeField] int shieldDamageUpgrade = 2;
