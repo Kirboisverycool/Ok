@@ -323,7 +323,7 @@ MonoBehaviour:
   weapon: {fileID: 3144582324300694500}
   particle: {fileID: 0}
   fireRate: 0.4
-  damage: 1
+  damage: 0.5
   shieldDamage: 1
   towerRange: 25
   slowDownAmount: 1
@@ -355,7 +355,7 @@ MonoBehaviour:
   - {fileID: 4984938868163879157}
   - {fileID: 6107452736433584197}
   towerCanvas: {fileID: 2168257898026609217}
-  upgradeCost: 100
+  upgradeCost: 300
   upgradeCostIncrease: 50
   maxUpgrade: 5
   currentUpgradeAmount: 0

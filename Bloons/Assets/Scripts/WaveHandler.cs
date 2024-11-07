@@ -10,11 +10,16 @@ public class WaveHandler : MonoBehaviour
     [SerializeField] float countdown;
     [SerializeField] GameObject spawnPoint;
     [SerializeField] TextMeshProUGUI nextWaveCountdownText;
+    [SerializeField] int moneyGiven = 50;
+    [SerializeField] int moneyGivenIncrease = 20;
+
+    Bank bank;
 
     TextMeshPro waveText;
 
     public Wave[] waves;
 
+    private bool isCalled;
     private int currentWaveIndex = 0;
     private bool readyToCountDown;
 
@@ -31,6 +36,8 @@ public class WaveHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        isCalled = false;
+        bank = FindObjectOfType<Bank>();
         waveText = GetComponentInChildren<TextMeshPro>();
 
         readyToCountDown = true;
@@ -65,6 +72,9 @@ public class WaveHandler : MonoBehaviour
         if (waves[currentWaveIndex].enemiesLeft == 0)
         {
             readyToCountDown = true;
+
+            EndWaveMoney();
+
             currentWaveIndex++;
         }
 
@@ -99,6 +109,12 @@ public class WaveHandler : MonoBehaviour
     private void UpdateCountdownText()
     {
         nextWaveCountdownText.text = "Next Wave In: " + waves[currentWaveIndex].timeToNextWave;
+    }
+
+    private void EndWaveMoney()
+    {
+        bank.Deposit(moneyGiven);
+        moneyGiven += moneyGivenIncrease;
     }
 
     [System.Serializable]

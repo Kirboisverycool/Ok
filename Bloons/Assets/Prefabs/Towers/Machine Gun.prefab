@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 594298947515259038, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: fireRate
-      value: 2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 594298947515259038, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: towerRange

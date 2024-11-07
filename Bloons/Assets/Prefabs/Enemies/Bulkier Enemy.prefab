@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3151654895745191344, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
       propertyPath: maxHitPoints
-      value: 7
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: -3151654895745191344, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
       propertyPath: shieldSystem
