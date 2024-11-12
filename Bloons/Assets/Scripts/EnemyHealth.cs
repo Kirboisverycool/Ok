@@ -7,7 +7,6 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] float maxHitPoints = 5;
-    [SerializeField] int shieldSystem;
     [SerializeField] AudioClip damageSoundClip;
     public float enemySlowDownTime;
     [SerializeField] bool isSlowed = false;
@@ -68,13 +67,10 @@ public class EnemyHealth : MonoBehaviour
         }
     }*/
 
-    public void TakeHit(float damage, int shieldDamage, float slowDown, float slowDownTime)
+    public void TakeHit(float damage, float slowDown, float slowDownTime)
     {
-        if(shieldSystem <= shieldDamage)
-        {
-            currentHitPoints -= damage;
-            SFXManager.instance.PlaySFXClip(damageSoundClip, transform, 1f);
-        }
+        currentHitPoints -= damage;
+        SFXManager.instance.PlaySFXClip(damageSoundClip, transform, 1f);
 
         if(slowDown != 1 && isSlowed == false) 
         {

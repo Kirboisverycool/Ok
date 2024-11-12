@@ -13,7 +13,6 @@ public class TargetLocator : MonoBehaviour
     [Header("Shooting")]
     [SerializeField] public float fireRate = 1f;
     [SerializeField] public float damage;
-    [SerializeField] public int shieldDamage = 1;
     [SerializeField] public float towerRange;
     [SerializeField] public float slowDownAmount = 1f;
     [SerializeField] public float slowDownTime = 2f;

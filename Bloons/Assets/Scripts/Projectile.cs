@@ -50,7 +50,7 @@ public class Projectile : MonoBehaviour
 
         if(enemy)
         {
-            enemy.TakeHit(targetLocator.damage, targetLocator.shieldDamage, targetLocator.slowDownAmount, targetLocator.slowDownTime);
+            enemy.TakeHit(targetLocator.damage, targetLocator.slowDownAmount, targetLocator.slowDownTime);
             if(aoeProjectile != null)
             {
                 aoeProjectile.AoeDamage();

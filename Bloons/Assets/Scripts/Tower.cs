@@ -27,7 +27,6 @@ public class Tower : MonoBehaviour
     [SerializeField] float damageUpgrade = 1;
     [SerializeField] float fireRateUpgrade = 0.2f;
     [SerializeField] float rangeUpgrade = 0.2f;
-    [SerializeField] int shieldDamageUpgrade = 2;
     [SerializeField] Projectile projectile;
 
     [Header("Water Tower Upgrades")]
@@ -190,10 +189,6 @@ public class Tower : MonoBehaviour
                     targetLocator.towerRange += rangeUpgrade;
                     upgradeCost += upgradeCostIncrease;
                     currentUpgradeAmount++;
-                    if(currentUpgradeAmount == 5)
-                    {
-                        targetLocator.shieldDamage += shieldDamageUpgrade;
-                    }
                 }
                 if(gameObject.layer == 8)
                 {
@@ -213,10 +208,6 @@ public class Tower : MonoBehaviour
                     targetLocator.slowDownAmount += slowDownAmountUpgrade;
                     upgradeCost += upgradeCostIncrease;
                     currentUpgradeAmount++;
-                    if (currentUpgradeAmount == 5)
-                    {
-                        targetLocator.shieldDamage += shieldDamageUpgrade;
-                    }
                 }
             }
             if (Input.GetKeyDown(KeyCode.X))

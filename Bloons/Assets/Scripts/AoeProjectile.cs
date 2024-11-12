@@ -33,7 +33,7 @@ public class AoeProjectile : MonoBehaviour
         {
             if(collider.GetComponent<EnemyHealth>())
             {
-                collider.GetComponent<EnemyHealth>().TakeHit(aoeDamage, aoeShieldDamage, targetLocator.slowDownAmount, targetLocator.slowDownTime);
+                collider.GetComponent<EnemyHealth>().TakeHit(aoeDamage, targetLocator.slowDownAmount, targetLocator.slowDownTime);
             }
         }
     }
