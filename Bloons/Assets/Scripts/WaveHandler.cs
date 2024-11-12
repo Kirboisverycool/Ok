@@ -12,6 +12,7 @@ public class WaveHandler : MonoBehaviour
     [SerializeField] TextMeshProUGUI nextWaveCountdownText;
     [SerializeField] int moneyGiven = 50;
     [SerializeField] int moneyGivenIncrease = 20;
+    [SerializeField] AudioClip waveAudioClip;
 
     Bank bank;
 
@@ -65,6 +66,7 @@ public class WaveHandler : MonoBehaviour
         {
             readyToCountDown = false;
 
+            SFXManager.instance.PlaySFXClip(waveAudioClip, transform, 1f);
             countdown = waves[currentWaveIndex].timeToNextWave;
             StartCoroutine(SpawnWave());
         }

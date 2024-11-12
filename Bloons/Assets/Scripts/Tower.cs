@@ -131,7 +131,7 @@ public class Tower : MonoBehaviour
                 towerUpgrades[4].text = "Slow Down Amount " + targetLocator.slowDownTime;
                 if (currentUpgradeAmount < maxUpgrade)
                 {
-                    towerUpgrades[5].text = "Upgrade Cost: " + upgradeCost;
+                    towerUpgrades[5].text = "Upgrade: " + upgradeCost;
                 }
                 else
                 {
@@ -147,7 +147,7 @@ public class Tower : MonoBehaviour
                 towerUpgrades[1].text = "Generating Cooldown: " + moneyMachine.generatingCooldown;
                 if (currentUpgradeAmount < maxUpgrade)
                 {
-                    towerUpgrades[2].text = "Upgrade Cost: " + upgradeCost;
+                    towerUpgrades[2].text = "Upgrade: " + upgradeCost;
                 }
                 else
                 {
@@ -164,7 +164,7 @@ public class Tower : MonoBehaviour
                 towerUpgrades[2].text = "Range: " + targetLocator.GetTowerRange();
                 if (currentUpgradeAmount < maxUpgrade)
                 {
-                    towerUpgrades[3].text = "Upgrade Cost: " + upgradeCost;
+                    towerUpgrades[3].text = "Upgrade: " + upgradeCost;
                 }
                 else
                 {
