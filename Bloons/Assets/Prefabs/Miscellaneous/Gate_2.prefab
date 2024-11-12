@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 5024383944018324912}
   - component: {fileID: 76278683245352594}
   - component: {fileID: -8569844589093296191}
+  - component: {fileID: -1521670546317206125}
   m_Layer: 12
   m_Name: Gate_2
   m_TagString: Obstacle
@@ -187,3 +188,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &-1521670546317206125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8593434845340903907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d49ffd3105c1064c8b6779c6c2b33ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buyableLands:
+  - {fileID: 0}
+  - {fileID: 0}
+  gate: {fileID: 0}
