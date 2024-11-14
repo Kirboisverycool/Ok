@@ -492,7 +492,7 @@ MonoBehaviour:
   - {fileID: 4984938868163879157}
   - {fileID: 6107452736433584197}
   towerCanvas: {fileID: 2168257898026609217}
-  upgradeCost: 300
+  upgradeCost: 200
   upgradeCostIncrease: 300
   maxUpgrade: 5
   currentUpgradeAmount: 0

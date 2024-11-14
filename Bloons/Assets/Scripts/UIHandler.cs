@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using TMPro;
 
 public class UIHandler : MonoBehaviour
 {
     [SerializeField] List<Image> towerButtons = new List<Image>();
+    [SerializeField] List<TextMeshProUGUI> infoTexts = new List<TextMeshProUGUI>();
 
     BuildTower buildTower;
 
@@ -24,6 +26,47 @@ public class UIHandler : MonoBehaviour
         MachineGunImage();
         WaterTurretImage();
         FarmImage();
+    }
+
+    public void TurretEnterInfo()
+    {
+        infoTexts[0].gameObject.SetActive(true);
+    }
+    public void TurretExitInfo()
+    {
+        infoTexts[0].gameObject.SetActive(false);
+    }
+    public void SniperEnterInfo()
+    {
+        infoTexts[1].gameObject.SetActive(true);
+    }
+    public void SniperExitInfo()
+    {
+        infoTexts[1].gameObject.SetActive(false);
+    }
+    public void MachineGunEnterInfo()
+    {
+        infoTexts[2].gameObject.SetActive(true);
+    }
+    public void MachineGunExitInfo()
+    {
+        infoTexts[2].gameObject.SetActive(false);
+    }
+    public void WaterTurretEnterInfo()
+    {
+        infoTexts[3].gameObject.SetActive(true);
+    }
+    public void WaterTurretExitInfo()
+    {
+        infoTexts[3].gameObject.SetActive(false);
+    }
+    public void FarmEnterInfo()
+    {
+        infoTexts[4].gameObject.SetActive(true);
+    }
+    public void FarmExitInfo()
+    {
+        infoTexts[4].gameObject.SetActive(false);
     }
 
     public void TurretButton()
