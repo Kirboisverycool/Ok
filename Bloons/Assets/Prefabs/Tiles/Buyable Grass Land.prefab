@@ -517,6 +517,7 @@ MonoBehaviour:
   costText: {fileID: 6205009789088453825}
   enemyMovers: []
   landLock: {fileID: 0}
+  poorSoundClip: {fileID: 8300000, guid: 82072c7282c072a45808fae85bbd95db, type: 3}
 --- !u!65 &6907278373007674456
 BoxCollider:
   m_ObjectHideFlags: 0

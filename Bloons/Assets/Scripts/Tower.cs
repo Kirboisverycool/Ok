@@ -11,6 +11,7 @@ public class Tower : MonoBehaviour
     [Header("Tower Cost")]
     [SerializeField] int cost = 5;
     [SerializeField] int sellGoldAmount;
+    [SerializeField] AudioClip poorSoundClip;
 
     [Header("Upgrades")]
     [SerializeField] List<TextMeshProUGUI> towerUpgrades = new List<TextMeshProUGUI>();
@@ -54,7 +55,7 @@ public class Tower : MonoBehaviour
     public bool CreateTower(Tower tower, Vector3 position, GameObject tile)
     {
         Bank bank = FindObjectOfType<Bank>();
-        
+
         if(bank.GetCurrentBalance() >= cost)
         {
             var twr = Instantiate(tower.gameObject, position, Quaternion.identity);
@@ -62,6 +63,10 @@ public class Tower : MonoBehaviour
             SFXManager.instance.PlaySFXClip(towerBuySoundClip, transform, 1f);
             bank.Withdraw(cost);
             return true;
+        }
+        else
+        {
+            SFXManager.instance.PlaySFXClip(poorSoundClip, transform, 1f);
         }
 
         return false;

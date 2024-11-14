@@ -87,7 +87,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHitPoints: 2.5
-  shieldSystem: 1
   damageSoundClip: {fileID: 8300000, guid: 6742b63c70fe1444dae7fdd125c79c5b, type: 3}
   enemySlowDownTime: 0
   isSlowed: 0

@@ -6,6 +6,7 @@ using System.Linq;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class BuyableLand : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class BuyableLand : MonoBehaviour
     [SerializeField] TextMeshPro costText;
     [SerializeField] EnemyMover[] enemyMovers;
     [SerializeField] BuyableLand landLock;
+    [SerializeField] AudioClip poorSoundClip;
 
     BoxCollider landCollider;
     AddPaths addPath;
@@ -79,6 +81,10 @@ public class BuyableLand : MonoBehaviour
 
                     AddPath();
                 }
+                else if(isBuyableLand && bank.GetCurrentBalance() <= cost)
+                {
+                    SFXManager.instance.PlaySFXClip(poorSoundClip, transform, 1f);
+                }
             }
         }
         else
@@ -105,6 +111,10 @@ public class BuyableLand : MonoBehaviour
                 isBuyableLand = false;
 
                 AddPath();
+            }
+            else if (isBuyableLand && bank.GetCurrentBalance() <= cost)
+            {
+                SFXManager.instance.PlaySFXClip(poorSoundClip, transform, 1f);
             }
         }
     }

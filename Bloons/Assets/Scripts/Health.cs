@@ -13,9 +13,13 @@ public class Health : MonoBehaviour
     float currentVelocity = 0f;
     int maxHealth = 100;
 
+    SceneLoader sceneLoader;
+
     // Start is called before the first frame update
     void Start()
     {
+        sceneLoader = FindObjectOfType<SceneLoader>();
+
         currentHealth = maxHealth;
 
         healthText.text = "Health: " + currentHealth;
@@ -29,8 +33,7 @@ public class Health : MonoBehaviour
     {
         if(currentHealth <= 0)
         {
-            Debug.Log("You Lose >:)");
-            return;
+            sceneLoader.LoadLoseScene();
         }
 
         float smoothSlider = Mathf.SmoothDamp(healthSlider.value, currentHealth, ref currentVelocity, smoothValue * Time.deltaTime);
@@ -39,8 +42,15 @@ public class Health : MonoBehaviour
 
     public void DealDamage(int damage)
     {
-        currentHealth -= damage;
+        if (currentHealth > 0)
+        {
+            currentHealth -= damage;
 
-        healthText.text = "Health " + currentHealth;
+            healthText.text = "Health " + currentHealth;
+        }
+        else
+        {
+            currentHealth = 0;
+        }
     }
 }

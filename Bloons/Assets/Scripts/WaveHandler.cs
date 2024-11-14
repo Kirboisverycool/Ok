@@ -15,6 +15,7 @@ public class WaveHandler : MonoBehaviour
     [SerializeField] AudioClip waveAudioClip;
 
     Bank bank;
+    SceneLoader sceneLoader;
 
     TextMeshPro waveText;
 
@@ -37,6 +38,7 @@ public class WaveHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sceneLoader = FindObjectOfType<SceneLoader>();
         isCalled = false;
         bank = FindObjectOfType<Bank>();
         waveText = GetComponentInChildren<TextMeshPro>();
@@ -54,6 +56,7 @@ public class WaveHandler : MonoBehaviour
     {
         if(currentWaveIndex >= waves.Length)
         {
+            sceneLoader.LoadWinScene();
             return;
         }
 

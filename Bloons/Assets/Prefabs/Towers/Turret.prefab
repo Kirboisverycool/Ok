@@ -485,6 +485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 100
   sellGoldAmount: 50
+  poorSoundClip: {fileID: 8300000, guid: 82072c7282c072a45808fae85bbd95db, type: 3}
   towerUpgrades:
   - {fileID: 2893089790459669499}
   - {fileID: 418460874124930270}
