@@ -31,7 +31,7 @@ Transform:
   m_Children:
   - {fileID: 8396966719718273334}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1028728266889924511
 MonoBehaviour:
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06933d91fedbb6f4bb4b17d7701f93dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingBalance: 10000000
+  startingBalance: 350
   currentBalance: 0
 --- !u!1 &6313871042121254995
 GameObject:

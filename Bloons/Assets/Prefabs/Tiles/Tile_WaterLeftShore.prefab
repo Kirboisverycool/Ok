@@ -82,11 +82,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5606423918933775299, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
       propertyPath: isPlaceable
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5606423918933775299, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
       propertyPath: isWaterTile
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8090020120397056222, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
       propertyPath: m_text

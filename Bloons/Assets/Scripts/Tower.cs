@@ -13,6 +13,9 @@ public class Tower : MonoBehaviour
     [SerializeField] int sellGoldAmount;
     [SerializeField] AudioClip poorSoundClip;
 
+    [Header("Tower")]
+    [SerializeField] GameObject rangeIndicator;
+
     [Header("Upgrades")]
     [SerializeField] List<TextMeshProUGUI> towerUpgrades = new List<TextMeshProUGUI>();
     [SerializeField] Canvas towerCanvas;
@@ -104,6 +107,8 @@ public class Tower : MonoBehaviour
         targetLocator = GetComponent<TargetLocator>();
         parent = FindObjectOfType<BuildTower>();
         gameObject.transform.SetParent(parent.transform);
+
+        rangeIndicator.transform.localScale = new Vector3(targetLocator.GetTowerRange(), 1, targetLocator.GetTowerRange());
     }
 
     // Update is called once per frame
@@ -115,6 +120,7 @@ public class Tower : MonoBehaviour
         {
             if (upgradeUIIsActive && Input.GetMouseButtonDown(0))
             {
+                rangeIndicator.SetActive(false);
                 towerCanvas.gameObject.SetActive(false);
                 upgradeUIIsActive = false;
                 outline.OutlineColor = Color.white;
@@ -129,6 +135,7 @@ public class Tower : MonoBehaviour
         {
             if (upgradeUIIsActive)
             {
+                rangeIndicator.SetActive(true);
                 towerUpgrades[0].text = "Damage: " + targetLocator.damage;
                 towerUpgrades[1].text = "Fire Rate: " + targetLocator.GetFireRate();
                 towerUpgrades[2].text = "Range: " + targetLocator.GetTowerRange();
@@ -140,7 +147,7 @@ public class Tower : MonoBehaviour
                 }
                 else
                 {
-                    towerUpgrades[5].text = "";
+                    towerUpgrades[5].text = "Max Level";
                 }
             }
         }
@@ -156,7 +163,7 @@ public class Tower : MonoBehaviour
                 }
                 else
                 {
-                    towerUpgrades[2].text = "";
+                    towerUpgrades[2].text = "Max Level";
                 }
             }
         }
@@ -164,6 +171,7 @@ public class Tower : MonoBehaviour
         {
             if (upgradeUIIsActive)
             {
+                rangeIndicator.SetActive(true);
                 towerUpgrades[0].text = "Damage: " + targetLocator.damage;
                 towerUpgrades[1].text = "Fire Rate: " + targetLocator.GetFireRate();
                 towerUpgrades[2].text = "Range: " + targetLocator.GetTowerRange();
@@ -173,7 +181,7 @@ public class Tower : MonoBehaviour
                 }
                 else
                 {
-                    towerUpgrades[3].text = "";
+                    towerUpgrades[3].text = "Max Level";
                 }
             }
         }
@@ -193,6 +201,7 @@ public class Tower : MonoBehaviour
                     targetLocator.fireRate += fireRateUpgrade;
                     targetLocator.towerRange += rangeUpgrade;
                     upgradeCost += upgradeCostIncrease;
+                    rangeIndicator.transform.localScale = new Vector3(targetLocator.GetTowerRange(), 1, targetLocator.GetTowerRange());
                     currentUpgradeAmount++;
                 }
                 if(gameObject.layer == 8)
@@ -212,6 +221,7 @@ public class Tower : MonoBehaviour
                     targetLocator.slowDownTime += slowDownTimeUpgrade;
                     targetLocator.slowDownAmount += slowDownAmountUpgrade;
                     upgradeCost += upgradeCostIncrease;
+                    rangeIndicator.transform.localScale = new Vector3(targetLocator.GetTowerRange(), 1, targetLocator.GetTowerRange());
                     currentUpgradeAmount++;
                 }
             }
@@ -224,6 +234,7 @@ public class Tower : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                rangeIndicator.SetActive(false);
                 towerCanvas.gameObject.SetActive(false);
                 upgradeUIIsActive = false;
                 outline.OutlineColor = Color.white;
