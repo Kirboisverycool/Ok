@@ -108,7 +108,10 @@ public class Tower : MonoBehaviour
         parent = FindObjectOfType<BuildTower>();
         gameObject.transform.SetParent(parent.transform);
 
-        rangeIndicator.transform.localScale = new Vector3(targetLocator.GetTowerRange(), 1, targetLocator.GetTowerRange());
+        if(rangeIndicator != null)
+        {
+            rangeIndicator.transform.localScale = new Vector3(targetLocator.GetTowerRange(), 1, targetLocator.GetTowerRange());
+        }
     }
 
     // Update is called once per frame
@@ -120,7 +123,10 @@ public class Tower : MonoBehaviour
         {
             if (upgradeUIIsActive && Input.GetMouseButtonDown(0))
             {
-                rangeIndicator.SetActive(false);
+                if (rangeIndicator != null)
+                {
+                    rangeIndicator.gameObject.SetActive(false);
+                }
                 towerCanvas.gameObject.SetActive(false);
                 upgradeUIIsActive = false;
                 outline.OutlineColor = Color.white;
@@ -201,7 +207,10 @@ public class Tower : MonoBehaviour
                     targetLocator.fireRate += fireRateUpgrade;
                     targetLocator.towerRange += rangeUpgrade;
                     upgradeCost += upgradeCostIncrease;
-                    rangeIndicator.transform.localScale = new Vector3(targetLocator.GetTowerRange(), 1, targetLocator.GetTowerRange());
+                    if (rangeIndicator != null)
+                    {
+                        rangeIndicator.transform.localScale = new Vector3(targetLocator.GetTowerRange(), 1, targetLocator.GetTowerRange());
+                    }
                     currentUpgradeAmount++;
                 }
                 if(gameObject.layer == 8)
@@ -220,21 +229,29 @@ public class Tower : MonoBehaviour
                     targetLocator.towerRange += rangeUpgrade;
                     targetLocator.slowDownTime += slowDownTimeUpgrade;
                     targetLocator.slowDownAmount += slowDownAmountUpgrade;
-                    upgradeCost += upgradeCostIncrease;
-                    rangeIndicator.transform.localScale = new Vector3(targetLocator.GetTowerRange(), 1, targetLocator.GetTowerRange());
+                    upgradeCost += upgradeCostIncrease; if (rangeIndicator != null)
+                    {
+                        rangeIndicator.transform.localScale = new Vector3(targetLocator.GetTowerRange(), 1, targetLocator.GetTowerRange());
+                    }
                     currentUpgradeAmount++;
                 }
             }
             if (Input.GetKeyDown(KeyCode.X))
             {
-                upgradeUIIsActive = false;
+                if (rangeIndicator != null)
+                {
+                    rangeIndicator.gameObject.SetActive(false);
+                }
                 tilePlaced.GetComponent<Waypoint>().isPlaceable = true;
                 bank.Deposit(sellGoldAmount);
                 Destroy(gameObject);
             }
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                rangeIndicator.SetActive(false);
+                if (rangeIndicator != null)
+                {
+                    rangeIndicator.gameObject.SetActive(false);
+                }
                 towerCanvas.gameObject.SetActive(false);
                 upgradeUIIsActive = false;
                 outline.OutlineColor = Color.white;
