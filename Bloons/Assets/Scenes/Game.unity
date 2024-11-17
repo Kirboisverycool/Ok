@@ -45102,9 +45102,49 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2870448292104334549, guid: 98fa5d55df174924ca9638c444aabff5, type: 3}
+      propertyPath: waves.Array.size
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 2870448292104334549, guid: 98fa5d55df174924ca9638c444aabff5, type: 3}
       propertyPath: nextWaveCountdownText
       value: 
       objectReference: {fileID: 1716532420}
+    - target: {fileID: 2870448292104334549, guid: 98fa5d55df174924ca9638c444aabff5, type: 3}
+      propertyPath: waves.Array.data[22].enemies.Array.data[7]
+      value: 
+      objectReference: {fileID: 49024837289489208, guid: a43be08c5a4b3124daafa48612a3e776, type: 3}
+    - target: {fileID: 2870448292104334549, guid: 98fa5d55df174924ca9638c444aabff5, type: 3}
+      propertyPath: waves.Array.data[22].enemies.Array.data[8]
+      value: 
+      objectReference: {fileID: 6010140829455489694, guid: 46e7ceedf7b2bf349b653d656d308305, type: 3}
+    - target: {fileID: 2870448292104334549, guid: 98fa5d55df174924ca9638c444aabff5, type: 3}
+      propertyPath: waves.Array.data[22].enemies.Array.data[9]
+      value: 
+      objectReference: {fileID: 6010140829455489694, guid: 46e7ceedf7b2bf349b653d656d308305, type: 3}
+    - target: {fileID: 2870448292104334549, guid: 98fa5d55df174924ca9638c444aabff5, type: 3}
+      propertyPath: waves.Array.data[22].enemies.Array.data[10]
+      value: 
+      objectReference: {fileID: 49024837289489208, guid: a43be08c5a4b3124daafa48612a3e776, type: 3}
+    - target: {fileID: 2870448292104334549, guid: 98fa5d55df174924ca9638c444aabff5, type: 3}
+      propertyPath: waves.Array.data[22].enemies.Array.data[11]
+      value: 
+      objectReference: {fileID: 6010140829455489694, guid: 46e7ceedf7b2bf349b653d656d308305, type: 3}
+    - target: {fileID: 2870448292104334549, guid: 98fa5d55df174924ca9638c444aabff5, type: 3}
+      propertyPath: waves.Array.data[22].enemies.Array.data[15]
+      value: 
+      objectReference: {fileID: 4023016773822772177, guid: 3660ef36460e3604b9640430565246a3, type: 3}
+    - target: {fileID: 2870448292104334549, guid: 98fa5d55df174924ca9638c444aabff5, type: 3}
+      propertyPath: waves.Array.data[22].enemies.Array.data[16]
+      value: 
+      objectReference: {fileID: 6010140829455489694, guid: 46e7ceedf7b2bf349b653d656d308305, type: 3}
+    - target: {fileID: 2870448292104334549, guid: 98fa5d55df174924ca9638c444aabff5, type: 3}
+      propertyPath: waves.Array.data[22].enemies.Array.data[17]
+      value: 
+      objectReference: {fileID: -3869816434560366137, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
+    - target: {fileID: 2870448292104334549, guid: 98fa5d55df174924ca9638c444aabff5, type: 3}
+      propertyPath: waves.Array.data[22].enemies.Array.data[18]
+      value: 
+      objectReference: {fileID: -3869816434560366137, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
     - target: {fileID: 3418907331805225783, guid: 98fa5d55df174924ca9638c444aabff5, type: 3}
       propertyPath: m_Name
       value: Wave Pool
