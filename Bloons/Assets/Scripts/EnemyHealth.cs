@@ -32,13 +32,6 @@ public class EnemyHealth : MonoBehaviour
     void Update()
     {
         SlowDown();
-
-        if (currentHitPoints <= 0)
-        {
-            Destroy(gameObject);
-            waveHandler.waves[waveHandler.GetCurrentWaveIndex()].enemiesLeft--;
-            enemy.RewardGold();
-        }
     }
 
     private void SlowDown()
@@ -78,6 +71,12 @@ public class EnemyHealth : MonoBehaviour
             enemySlowDownTime = slowDownTime;
             enemyMover.speed /= slowDown;
             isSlowed = true;
+        }
+        if (currentHitPoints <= 0)
+        {
+            Destroy(gameObject);
+            waveHandler.waves[waveHandler.GetCurrentWaveIndex()].enemiesLeft--;
+            enemy.RewardGold();
         }
     }
 

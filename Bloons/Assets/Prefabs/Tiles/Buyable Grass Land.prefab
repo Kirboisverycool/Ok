@@ -511,7 +511,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   buyableLands: []
-  cost: 500
+  cost: 350
   costIncrease: 5
   highlight: {fileID: 757894362699730140}
   costText: {fileID: 6205009789088453825}

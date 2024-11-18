@@ -92,7 +92,11 @@ public class WaveHandler : MonoBehaviour
             nextWaveCountdownText.gameObject.SetActive(false);
         }
 
-        waveText.text = "Wave: " + currentWaveIndex;
+        int waveTextIndex = 1;
+
+        waveTextIndex += currentWaveIndex;
+
+        waveText.text = "Wave: " + waveTextIndex;
         nextWaveCountdownText.text = "Next Wave In: " + Mathf.RoundToInt(countdown);
     }
 
