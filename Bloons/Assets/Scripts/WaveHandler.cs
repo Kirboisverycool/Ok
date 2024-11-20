@@ -133,6 +133,6 @@ public class WaveHandler : MonoBehaviour
         public float timeToNextEnemy;
         public float timeToNextWave;
 
-        [HideInInspector] public int enemiesLeft;
+        [SerializeField] public int enemiesLeft;
     }
 }

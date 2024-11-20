@@ -96,9 +96,10 @@ public class EnemyHealth : MonoBehaviour
         }
         if (currentHitPoints <= 0)
         {
-            Destroy(gameObject);
             waveHandler.waves[waveHandler.GetCurrentWaveIndex()].enemiesLeft--;
             enemy.RewardGold();
+            Destroy(gameObject);
+            return;
         }
     }
 

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5396875450360281855
+--- !u!1001 &39097962104560498
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3151654895745191344, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
       propertyPath: maxHitPoints
-      value: 6
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2586615396026993599, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
       propertyPath: m_Name
-      value: Bulky Enemy
+      value: Weak Boss
       objectReference: {fileID: 0}
     - target: {fileID: 5867322863960311526, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
       propertyPath: speed
-      value: 0.4
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 9027240394253478943, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
       propertyPath: m_RootOrder
