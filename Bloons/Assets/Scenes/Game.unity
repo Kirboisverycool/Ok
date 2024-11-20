@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.5504695, g: 0.6156996, b: 0.6371367, a: 1}
+  m_IndirectSpecularColor: {r: 0.5504678, g: 0.615699, b: 0.6371352, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7035,11 +7035,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4043900742468407126, guid: e49b84cabdbd0c34e879f0e5390f394e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015896621
+      value: -0.000000015896624
       objectReference: {fileID: 0}
     - target: {fileID: 4043900742468407126, guid: e49b84cabdbd0c34e879f0e5390f394e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000006584596
+      value: 0.000000006584597
       objectReference: {fileID: 0}
     - target: {fileID: 7461246029594963840, guid: e49b84cabdbd0c34e879f0e5390f394e, type: 3}
       propertyPath: m_Name
@@ -7047,11 +7047,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7709145666028340156, guid: e49b84cabdbd0c34e879f0e5390f394e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015896621
+      value: -0.000000015896624
       objectReference: {fileID: 0}
     - target: {fileID: 7709145666028340156, guid: e49b84cabdbd0c34e879f0e5390f394e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000006584596
+      value: 0.000000006584597
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28810,10 +28810,6 @@ PrefabInstance:
     - target: {fileID: 8593434845340903907, guid: 4c29e4de4a2bbfb4b8b0ef23411b4393, type: 3}
       propertyPath: m_Name
       value: Gate_2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8593434845340903907, guid: 4c29e4de4a2bbfb4b8b0ef23411b4393, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8937907871563281241, guid: 4c29e4de4a2bbfb4b8b0ef23411b4393, type: 3}
       propertyPath: m_RootOrder

@@ -2,13 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(Enemy))]
 public class EnemyHealth : MonoBehaviour
 {
+    [SerializeField] Slider healthSlider;
+    [SerializeField] float smoothValue;
     [SerializeField] float maxHitPoints = 5;
     [SerializeField] AudioClip damageSoundClip;
+    [SerializeField] Vector3 offset;
+    Camera camera;
+    [SerializeField] Transform target;
     public float enemySlowDownTime;
+    float currentVelocity = 0f;
     [SerializeField] bool isSlowed = false;
     float maxSpeed;
 
@@ -21,9 +28,13 @@ public class EnemyHealth : MonoBehaviour
     void Start()
     {
         currentHitPoints = maxHitPoints;
+        camera = FindObjectOfType<Camera>();
         enemy = GetComponent<Enemy>();
         waveHandler = GetComponentInParent<WaveHandler>();
         enemyMover = GetComponent<EnemyMover>();
+
+        healthSlider.maxValue = maxHitPoints;
+        healthSlider.value = currentHitPoints;
 
         maxSpeed = enemyMover.speed;
     }
@@ -32,6 +43,8 @@ public class EnemyHealth : MonoBehaviour
     void Update()
     {
         SlowDown();
+
+        HealthSlider();
     }
 
     private void SlowDown()
@@ -47,6 +60,15 @@ public class EnemyHealth : MonoBehaviour
             enemyMover.speed = maxSpeed;
             enemySlowDownTime = 0;
         }
+    }
+
+    void HealthSlider()
+    {
+        healthSlider.transform.rotation = camera.transform.rotation;
+        healthSlider.transform.position = target.position + offset;
+
+        float smoothSlider = Mathf.SmoothDamp(healthSlider.value, currentHitPoints, ref currentVelocity, smoothValue * Time.deltaTime);
+        healthSlider.value = smoothSlider;
     }
 
     /*private void OnParticleCollision(GameObject other)

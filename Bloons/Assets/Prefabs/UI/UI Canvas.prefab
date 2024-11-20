@@ -284,7 +284,6 @@ GameObject:
   - component: {fileID: 5971130889687967966}
   - component: {fileID: 2816707436997579306}
   - component: {fileID: 8653709134779880731}
-  - component: {fileID: 5630584758240126683}
   - component: {fileID: 5025613805659815032}
   m_Layer: 5
   m_Name: Machine Gun Button
@@ -409,18 +408,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &5630584758240126683
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1459874578788762628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3554bea93c0b994a9f744f10f42bac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5025613805659815032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -691,7 +678,6 @@ GameObject:
   - component: {fileID: 6599263811160258330}
   - component: {fileID: 6732612750765427362}
   - component: {fileID: 5778839096061570692}
-  - component: {fileID: 4424491902827933790}
   - component: {fileID: 1290362157412748507}
   m_Layer: 5
   m_Name: Turret Button
@@ -816,18 +802,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4424491902827933790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1956514262062838922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3554bea93c0b994a9f744f10f42bac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1290362157412748507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1155,7 +1129,6 @@ GameObject:
   - component: {fileID: 5105495702256490839}
   - component: {fileID: 6992276288580749249}
   - component: {fileID: 1819706165709555274}
-  - component: {fileID: 4755077867562559431}
   - component: {fileID: 2613641449444268021}
   m_Layer: 5
   m_Name: Water Turret Button
@@ -1280,18 +1253,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4755077867562559431
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3293617377634196574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3554bea93c0b994a9f744f10f42bac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2613641449444268021
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1607,7 +1568,7 @@ GameObject:
   - component: {fileID: 7400730679836932761}
   - component: {fileID: 5610810546260091796}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Health Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1792,7 +1753,7 @@ MonoBehaviour:
   m_text: This tower is cheap and spammable although it is much weaker then all the
     other towers.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c2c41cbd87e08fd4aa5a018a0614a144, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1856,7 +1817,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &4608060881754950477
@@ -2006,7 +1967,6 @@ GameObject:
   - component: {fileID: 7857131284279015462}
   - component: {fileID: 2747086897517759786}
   - component: {fileID: 8994715584311014178}
-  - component: {fileID: 6289382403525491893}
   - component: {fileID: 5033449635025786425}
   m_Layer: 5
   m_Name: Farm Button
@@ -2131,18 +2091,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6289382403525491893
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4724344371802096240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3554bea93c0b994a9f744f10f42bac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &5033449635025786425
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2337,7 +2285,6 @@ GameObject:
   - component: {fileID: 2304743443781939124}
   - component: {fileID: 1722363047692980072}
   - component: {fileID: 5413086758576119150}
-  - component: {fileID: 4013772556322488593}
   - component: {fileID: 2464817524763721598}
   m_Layer: 5
   m_Name: Sniper Button
@@ -2462,18 +2409,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &4013772556322488593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4908286651502687206}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3554bea93c0b994a9f744f10f42bac1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2464817524763721598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2968,7 +2903,7 @@ MonoBehaviour:
   m_text: This tower has high damage and incredible range but it has a slow fire
     rate.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c2c41cbd87e08fd4aa5a018a0614a144, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3032,7 +2967,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &7424305106065100339
@@ -3239,7 +3174,7 @@ MonoBehaviour:
   m_text: This tower has a very high fire rate allowing it to shred through enemies
     as the cost of being the most expensive tower.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c2c41cbd87e08fd4aa5a018a0614a144, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3303,7 +3238,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &7851210852242062175
@@ -3375,7 +3310,7 @@ MonoBehaviour:
   m_text: This tower is just like the regular turret but it can only be placed on
     water and slows down enemies.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c2c41cbd87e08fd4aa5a018a0614a144, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3439,7 +3374,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &8330225464297330936
@@ -3511,7 +3446,7 @@ MonoBehaviour:
   m_text: This tower produces a little money every few seconds but due to its high
     cost its more so a long term investment.
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c2c41cbd87e08fd4aa5a018a0614a144, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -3575,7 +3510,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &8896647662340565418

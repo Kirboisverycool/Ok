@@ -35,7 +35,10 @@ public class Health : MonoBehaviour
         {
             sceneLoader.LoadLoseScene();
         }
+    }
 
+    void SmoothHealthSlider()
+    {
         float smoothSlider = Mathf.SmoothDamp(healthSlider.value, currentHealth, ref currentVelocity, smoothValue * Time.deltaTime);
         healthSlider.value = smoothSlider;
     }
