@@ -93,7 +93,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: cost
-      value: 1000
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: projectile
@@ -117,7 +117,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: sellGoldAmount
-      value: 500
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: fireRateUpgrade
@@ -125,7 +125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: goldRecievedUpgrade
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: slowDownTimeUpgrade
@@ -133,7 +133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: upgradeCostIncrease
-      value: 400
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: slowDownAmountUpgrade
@@ -320,6 +320,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 469035e70768e37449b9a9aae8792200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goldAmount: 5
-  generatingCooldown: 7
+  goldAmount: 10
+  generatingCooldown: 5
   moneySoundClip: {fileID: 8300000, guid: 3b5b2e147b1a2bf4ca2dfd54d363d261, type: 3}

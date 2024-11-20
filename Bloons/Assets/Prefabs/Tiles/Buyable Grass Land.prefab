@@ -518,6 +518,7 @@ MonoBehaviour:
   enemyMovers: []
   landLock: {fileID: 0}
   poorSoundClip: {fileID: 8300000, guid: 82072c7282c072a45808fae85bbd95db, type: 3}
+  buyLandSoundClip: {fileID: 8300000, guid: 3b5b2e147b1a2bf4ca2dfd54d363d261, type: 3}
 --- !u!65 &6907278373007674456
 BoxCollider:
   m_ObjectHideFlags: 0

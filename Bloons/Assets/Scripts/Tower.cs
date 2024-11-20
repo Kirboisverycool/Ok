@@ -12,6 +12,8 @@ public class Tower : MonoBehaviour
     [SerializeField] int cost = 5;
     [SerializeField] int sellGoldAmount;
     [SerializeField] AudioClip poorSoundClip;
+    [SerializeField] AudioClip sellTowerSoundClip;
+    [SerializeField] AudioClip towerBuySoundClip;
 
     [Header("Tower")]
     [SerializeField] GameObject rangeIndicator;
@@ -26,6 +28,7 @@ public class Tower : MonoBehaviour
     bool notOverObject = false;
     bool upgradeUIIsActive = false;
     public GameObject tilePlaced;
+    [SerializeField] AudioClip upgradeBuySoundClip;
 
     [Header("Tower Upgrades")]
     [SerializeField] float damageUpgrade = 1;
@@ -40,8 +43,6 @@ public class Tower : MonoBehaviour
     [Header("Farm Upgrades")]
     [SerializeField] int goldRecievedUpgrade = 1;
     [SerializeField] float generatingCooldownUpgrade = 0.3f;
-
-    [SerializeField] AudioClip towerBuySoundClip;
 
     MoneyMachine moneyMachine;
     Bank bank;
@@ -202,6 +203,7 @@ public class Tower : MonoBehaviour
             { 
                 if(gameObject.layer == 7)
                 {
+                    SFXManager.instance.PlaySFXClip(upgradeBuySoundClip, transform, 1f);
                     bank.Withdraw(upgradeCost);
                     targetLocator.damage += damageUpgrade;
                     targetLocator.fireRate += fireRateUpgrade;
@@ -215,6 +217,7 @@ public class Tower : MonoBehaviour
                 }
                 if(gameObject.layer == 8)
                 {
+                    SFXManager.instance.PlaySFXClip(upgradeBuySoundClip, transform, 1f);
                     bank.Withdraw(upgradeCost);
                     moneyMachine.goldAmount += goldRecievedUpgrade;
                     moneyMachine.generatingCooldown -= generatingCooldownUpgrade;
@@ -223,6 +226,7 @@ public class Tower : MonoBehaviour
                 }
                 if (gameObject.layer == 9)
                 {
+                    SFXManager.instance.PlaySFXClip(upgradeBuySoundClip, transform, 1f);
                     bank.Withdraw(upgradeCost);
                     targetLocator.damage += damageUpgrade;
                     targetLocator.fireRate += fireRateUpgrade;
@@ -236,6 +240,10 @@ public class Tower : MonoBehaviour
                     currentUpgradeAmount++;
                 }
             }
+            if(Input.GetKeyDown(KeyCode.Z) && upgradeCost > bank.GetCurrentBalance())
+            {
+                SFXManager.instance.PlaySFXClip(poorSoundClip, transform, 1f);
+            }
             if (Input.GetKeyDown(KeyCode.X))
             {
                 if (rangeIndicator != null)
@@ -243,6 +251,7 @@ public class Tower : MonoBehaviour
                     rangeIndicator.gameObject.SetActive(false);
                 }
                 tilePlaced.GetComponent<Waypoint>().isPlaceable = true;
+                SFXManager.instance.PlaySFXClip(sellTowerSoundClip, transform, 1f);
                 bank.Deposit(sellGoldAmount);
                 Destroy(gameObject);
             }

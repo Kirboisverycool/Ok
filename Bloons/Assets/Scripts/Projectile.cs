@@ -50,12 +50,11 @@ public class Projectile : MonoBehaviour
 
         if(enemy)
         {
-            enemy.TakeHit(targetLocator.damage, targetLocator.slowDownAmount, targetLocator.slowDownTime);
-            if(aoeProjectile != null)
+            if(enemy.currentHitPoints != 0)
             {
-                aoeProjectile.AoeDamage();
+                enemy.TakeHit(targetLocator.damage, targetLocator.slowDownAmount, targetLocator.slowDownTime);
+                Destroy(gameObject);
             }
-            Destroy(gameObject);
         }
         if (collision.CompareTag("Obstacle"))
         {

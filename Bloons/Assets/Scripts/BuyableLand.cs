@@ -20,6 +20,7 @@ public class BuyableLand : MonoBehaviour
     [SerializeField] EnemyMover[] enemyMovers;
     [SerializeField] BuyableLand landLock;
     [SerializeField] AudioClip poorSoundClip;
+    [SerializeField] AudioClip buyLandSoundClip;
 
     BoxCollider landCollider;
     AddPaths addPath;
@@ -72,6 +73,8 @@ public class BuyableLand : MonoBehaviour
                             buyableLand.gameObject.SetActive(true);
                         }
                     }
+
+                    SFXManager.instance.PlaySFXClip(buyLandSoundClip, transform, 1f);
 
                     bank.Withdraw(cost);
 

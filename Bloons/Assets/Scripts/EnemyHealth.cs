@@ -22,7 +22,7 @@ public class EnemyHealth : MonoBehaviour
     WaveHandler waveHandler;
     Enemy enemy;
     EnemyMover enemyMover;
-    [SerializeField] float currentHitPoints = 0;
+    [SerializeField] public float currentHitPoints = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +45,13 @@ public class EnemyHealth : MonoBehaviour
         SlowDown();
 
         HealthSlider();
+
+        if (currentHitPoints <= 0)
+        {
+            enemy.RewardGold();
+            waveHandler.waves[waveHandler.GetCurrentWaveIndex()].enemiesLeft--;
+            Destroy(gameObject);
+        }
     }
 
     private void SlowDown()
@@ -93,13 +100,6 @@ public class EnemyHealth : MonoBehaviour
             enemySlowDownTime = slowDownTime;
             enemyMover.speed /= slowDown;
             isSlowed = true;
-        }
-        if (currentHitPoints <= 0)
-        {
-            waveHandler.waves[waveHandler.GetCurrentWaveIndex()].enemiesLeft--;
-            enemy.RewardGold();
-            Destroy(gameObject);
-            return;
         }
     }
 

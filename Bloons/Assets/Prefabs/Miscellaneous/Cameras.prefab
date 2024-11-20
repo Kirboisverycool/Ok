@@ -149,6 +149,11 @@ MonoBehaviour:
   edgeScrollSize: 20
   isEdgeScrolling: 0
   dragPanSpeed: -0.4
+  minX: -80
+  maxX: 130
+  minZ: -110
+  maxZ: 100
+  height: 0
 --- !u!1 &5754705049986271275
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +258,7 @@ Transform:
   - {fileID: 7709145666028340156}
   - {fileID: 4562508757653360431}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9173973128325468010
 GameObject:
@@ -516,4 +521,4 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 45, y: 10, z: 10}
-  m_Center: {x: 0, y: 0, z: -25}
+  m_Center: {x: 0, y: 0, z: -30}

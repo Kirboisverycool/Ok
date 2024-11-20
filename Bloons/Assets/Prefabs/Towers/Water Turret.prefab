@@ -414,6 +414,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 150
       objectReference: {fileID: 0}
+    - target: {fileID: 5258053972556064120, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: m_text
+      value: Water Turret
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258053972556064120, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: m_margin.z
+      value: -40.45777
+      objectReference: {fileID: 0}
     - target: {fileID: 6247595896291831260, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: m_IsActive
       value: 0

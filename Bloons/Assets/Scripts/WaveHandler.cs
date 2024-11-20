@@ -65,15 +65,6 @@ public class WaveHandler : MonoBehaviour
             countdown -= Time.deltaTime;
         }
 
-        if (countdown <= 0)
-        {
-            readyToCountDown = false;
-
-            SFXManager.instance.PlaySFXClip(waveAudioClip, transform, 1f);
-            countdown = waves[currentWaveIndex].timeToNextWave;
-            StartCoroutine(SpawnWave());
-        }
-
         if (waves[currentWaveIndex].enemiesLeft == 0)
         {
             readyToCountDown = true;
@@ -83,7 +74,16 @@ public class WaveHandler : MonoBehaviour
             currentWaveIndex++;
         }
 
-        if(readyToCountDown)
+        if (countdown <= 0)
+        {
+            readyToCountDown = false;
+
+            SFXManager.instance.PlaySFXClip(waveAudioClip, transform, 1f);
+            countdown = waves[currentWaveIndex].timeToNextWave;
+            StartCoroutine(SpawnWave());
+        }
+
+        if (readyToCountDown)
         {
             nextWaveCountdownText.gameObject.SetActive(true);
         }
@@ -104,9 +104,9 @@ public class WaveHandler : MonoBehaviour
     {
         if(currentWaveIndex < waves.Length)
         {
-            for (int i = 0; i < waves[currentWaveIndex].enemies.Length; i++)
+            foreach (Enemy v in waves[currentWaveIndex].enemies)
             {
-                Enemy enemy = Instantiate(waves[currentWaveIndex].enemies[i], spawnPoint.transform);
+                Enemy enemy = Instantiate(v, spawnPoint.transform);
 
                 enemy.transform.SetParent(spawnPoint.transform);
 

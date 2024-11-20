@@ -2490,7 +2490,7 @@ RectTransform:
   - {fileID: 8578788442136097826}
   - {fileID: 3677192223760487682}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2763,9 +2763,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '$1000
-
-'
+  m_text: $600
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c2c41cbd87e08fd4aa5a018a0614a144, type: 2}
   m_sharedMaterial: {fileID: -8345402272413988340, guid: c2c41cbd87e08fd4aa5a018a0614a144, type: 2}
@@ -3443,8 +3441,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This tower produces a little money every few seconds but due to its high
-    cost its more so a long term investment.
+  m_text: This tower produces a money every few seconds but due to its high cost
+    its more so a long term investment.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c2c41cbd87e08fd4aa5a018a0614a144, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -35,6 +35,8 @@ public class Health : MonoBehaviour
         {
             sceneLoader.LoadLoseScene();
         }
+
+        SmoothHealthSlider();
     }
 
     void SmoothHealthSlider()

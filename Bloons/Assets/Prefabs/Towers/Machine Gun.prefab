@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: upgradeCost
-      value: 600
+      value: 800
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: rangeUpgrade
@@ -152,9 +152,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8323129881b7b8e40b47812304c739d4, type: 2}
+    - target: {fileID: 5258053972556064120, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: m_text
+      value: Machine Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 5258053972556064120, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: m_margin.z
+      value: -26.7331
+      objectReference: {fileID: 0}
     - target: {fileID: 6131056645070147807, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: m_Name
       value: MachineGunTopMesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 6247595896291831260, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6576528555559247076, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: m_LocalPosition.y

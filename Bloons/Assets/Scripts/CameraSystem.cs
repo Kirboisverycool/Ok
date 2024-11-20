@@ -22,6 +22,11 @@ public class CameraSystem : MonoBehaviour
     private bool dragPanMoveActive;
     private Vector2 lastMousePosition;
     [SerializeField] float dragPanSpeed = 2f;
+    [SerializeField] float minX = -100f;
+    [SerializeField] float maxX = 100f;
+    [SerializeField] float minZ = 100f;
+    [SerializeField] float maxZ = -100f;
+    [SerializeField] float height = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -131,6 +136,8 @@ public class CameraSystem : MonoBehaviour
 
     void MoveCamera()
     {
+        transform.position = new Vector3(Mathf.Clamp(transform.position.x, minX, maxX), height, Mathf.Clamp(transform.position.z, minZ, maxZ));
+
         Vector3 inputDir = new Vector3(0, 0, 0);
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
