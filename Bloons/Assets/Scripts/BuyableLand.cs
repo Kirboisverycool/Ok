@@ -107,6 +107,8 @@ public class BuyableLand : MonoBehaviour
                     }
                 }
 
+                SFXManager.instance.PlaySFXClip(buyLandSoundClip, transform, 1f);
+
                 bank.Withdraw(cost);
 
                 landCollider.enabled = false;

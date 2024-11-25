@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: upgradeCost
-      value: 400
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: rangeUpgrade
@@ -27,6 +27,14 @@ PrefabInstance:
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: fireRateUpgrade
       value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: sellGoldIncrease
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: upgradeCostIncrease
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 594298947515259038, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: damage

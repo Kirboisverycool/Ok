@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Slow Down Time:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c2c41cbd87e08fd4aa5a018a0614a144, type: 2}
+  m_sharedMaterial: {fileID: -8345402272413988340, guid: c2c41cbd87e08fd4aa5a018a0614a144, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -203,8 +203,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Slow Down Amount:'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c2c41cbd87e08fd4aa5a018a0614a144, type: 2}
+  m_sharedMaterial: {fileID: -8345402272413988340, guid: c2c41cbd87e08fd4aa5a018a0614a144, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -280,15 +280,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: cost
-      value: 300
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: upgradeCost
-      value: 500
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: rangeUpgrade
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: sellGoldAmount
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: sellGoldIncrease
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: slowDownTimeUpgrade
@@ -296,7 +304,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: upgradeCostIncrease
-      value: 400
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: -1879724987132364427, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: towerUpgrades.Array.size
@@ -320,7 +328,7 @@ PrefabInstance:
       objectReference: {fileID: -2432090755550338912, guid: 19a72fdd8ce9cb7458d58289e1117552, type: 3}
     - target: {fileID: 594298947515259038, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: towerRange
-      value: 25
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 594298947515259038, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: slowDownTime
@@ -339,8 +347,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: bfe8bba340853e5408ded5d7ce2bd8e6, type: 2}
     - target: {fileID: 2168060151142922638, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168060151142922638, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -100
+      value: 380
       objectReference: {fileID: 0}
     - target: {fileID: 2700054976229155917, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: m_Mesh
@@ -406,6 +418,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9cea02cbd55d9ca4e9ac704c508c6f3b, type: 2}
+    - target: {fileID: 4474783722324429824, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 510
+      objectReference: {fileID: 0}
+    - target: {fileID: 4474783722324429824, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4718542115110153919, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 250
@@ -424,7 +444,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6247595896291831260, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6576528555559247076, guid: 8a965e088bae16643aab3d07ccfd5e2e, type: 3}
       propertyPath: m_LocalPosition.y

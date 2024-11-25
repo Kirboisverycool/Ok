@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2240897747761592453}
   - component: {fileID: 7449337228492808704}
   - component: {fileID: -6012009399545628432}
+  - component: {fileID: 5587310077185119806}
   m_Layer: 12
   m_Name: Gate_1
   m_TagString: Obstacle
@@ -33,7 +34,7 @@ Transform:
   m_Children:
   - {fileID: 2761512976873378339}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2240897747761592453
 BoxCollider:
@@ -104,6 +105,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &5587310077185119806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2695749580432488897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d49ffd3105c1064c8b6779c6c2b33ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buyableLands:
+  - {fileID: 0}
+  - {fileID: 0}
+  gate: {fileID: 0}
 --- !u!1 &6405510745139003672
 GameObject:
   m_ObjectHideFlags: 0

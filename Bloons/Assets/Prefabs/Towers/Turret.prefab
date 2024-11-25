@@ -561,10 +561,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef7a05cb6ae7d764ea28446607d07077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 100
-  sellGoldAmount: 50
+  cost: 150
+  sellGoldAmount: 75
+  sellGoldIncrease: 125
   poorSoundClip: {fileID: 8300000, guid: 82072c7282c072a45808fae85bbd95db, type: 3}
   sellTowerSoundClip: {fileID: 8300000, guid: 3b5b2e147b1a2bf4ca2dfd54d363d261, type: 3}
+  towerBuySoundClip: {fileID: 8300000, guid: 3b5b2e147b1a2bf4ca2dfd54d363d261, type: 3}
   rangeIndicator: {fileID: 7658100143161549106}
   towerUpgrades:
   - {fileID: 2893089790459669499}
@@ -573,7 +575,7 @@ MonoBehaviour:
   - {fileID: 6107452736433584197}
   towerCanvas: {fileID: 2168257898026609217}
   upgradeCost: 250
-  upgradeCostIncrease: 300
+  upgradeCostIncrease: 250
   maxUpgrade: 5
   currentUpgradeAmount: 0
   tilePlaced: {fileID: 0}
@@ -586,7 +588,6 @@ MonoBehaviour:
   slowDownTimeUpgrade: 0
   goldRecievedUpgrade: 0
   generatingCooldownUpgrade: 0
-  towerBuySoundClip: {fileID: 8300000, guid: 3b5b2e147b1a2bf4ca2dfd54d363d261, type: 3}
 --- !u!65 &303524105815066999
 BoxCollider:
   m_ObjectHideFlags: 0

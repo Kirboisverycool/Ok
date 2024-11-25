@@ -11,6 +11,7 @@ public class Tower : MonoBehaviour
     [Header("Tower Cost")]
     [SerializeField] int cost = 5;
     [SerializeField] int sellGoldAmount;
+    [SerializeField] int sellGoldIncrease;
     [SerializeField] AudioClip poorSoundClip;
     [SerializeField] AudioClip sellTowerSoundClip;
     [SerializeField] AudioClip towerBuySoundClip;
@@ -205,6 +206,7 @@ public class Tower : MonoBehaviour
                 {
                     SFXManager.instance.PlaySFXClip(upgradeBuySoundClip, transform, 1f);
                     bank.Withdraw(upgradeCost);
+                    sellGoldAmount += sellGoldIncrease;
                     targetLocator.damage += damageUpgrade;
                     targetLocator.fireRate += fireRateUpgrade;
                     targetLocator.towerRange += rangeUpgrade;
@@ -219,6 +221,7 @@ public class Tower : MonoBehaviour
                 {
                     SFXManager.instance.PlaySFXClip(upgradeBuySoundClip, transform, 1f);
                     bank.Withdraw(upgradeCost);
+                    sellGoldAmount += sellGoldIncrease;
                     moneyMachine.goldAmount += goldRecievedUpgrade;
                     moneyMachine.generatingCooldown -= generatingCooldownUpgrade;
                     upgradeCost += upgradeCostIncrease;
@@ -228,22 +231,25 @@ public class Tower : MonoBehaviour
                 {
                     SFXManager.instance.PlaySFXClip(upgradeBuySoundClip, transform, 1f);
                     bank.Withdraw(upgradeCost);
+                    sellGoldAmount += sellGoldIncrease;
                     targetLocator.damage += damageUpgrade;
                     targetLocator.fireRate += fireRateUpgrade;
                     targetLocator.towerRange += rangeUpgrade;
                     targetLocator.slowDownTime += slowDownTimeUpgrade;
                     targetLocator.slowDownAmount += slowDownAmountUpgrade;
-                    upgradeCost += upgradeCostIncrease; if (rangeIndicator != null)
+                    upgradeCost += upgradeCostIncrease; 
+                    if (rangeIndicator != null)
                     {
                         rangeIndicator.transform.localScale = new Vector3(targetLocator.GetTowerRange(), 1, targetLocator.GetTowerRange());
                     }
                     currentUpgradeAmount++;
                 }
             }
-            if(Input.GetKeyDown(KeyCode.Z) && upgradeCost > bank.GetCurrentBalance())
+            else if(upgradeCost > bank.GetCurrentBalance() && Input.GetKeyDown(KeyCode.Z))
             {
                 SFXManager.instance.PlaySFXClip(poorSoundClip, transform, 1f);
             }
+
             if (Input.GetKeyDown(KeyCode.X))
             {
                 if (rangeIndicator != null)

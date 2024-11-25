@@ -3318,7 +3318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6010716017297900711, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8090020120397056222, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
       propertyPath: m_text
@@ -3326,7 +3326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8604023162007444128, guid: b228642220b0f654f8b98d649a8aafb9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19986,6 +19986,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5587310077185119806, guid: d0127103aeb54ed45b71e686472ac405, type: 3}
+      propertyPath: gate
+      value: 
+      objectReference: {fileID: 985364059}
+    - target: {fileID: 5587310077185119806, guid: d0127103aeb54ed45b71e686472ac405, type: 3}
+      propertyPath: buyableLands.Array.data[0]
+      value: 
+      objectReference: {fileID: 1556472170}
+    - target: {fileID: 5587310077185119806, guid: d0127103aeb54ed45b71e686472ac405, type: 3}
+      propertyPath: buyableLands.Array.data[1]
+      value: 
+      objectReference: {fileID: 669107040}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28124,6 +28136,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff68e45586781e249ad3939f818813aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &985364059 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8593434845340903907, guid: 4c29e4de4a2bbfb4b8b0ef23411b4393, type: 3}
+  m_PrefabInstance: {fileID: 1019441381}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &986394552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28811,6 +28828,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gate_2
       objectReference: {fileID: 0}
+    - target: {fileID: 8593434845340903907, guid: 4c29e4de4a2bbfb4b8b0ef23411b4393, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8937907871563281241, guid: 4c29e4de4a2bbfb4b8b0ef23411b4393, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -28855,7 +28876,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -1521670546317206125, guid: 4c29e4de4a2bbfb4b8b0ef23411b4393, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
