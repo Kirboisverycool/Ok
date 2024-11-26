@@ -24,6 +24,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bulky Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3353781130976541740, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: af9c818368a796e45882eab7f638a297, type: 3}
     - target: {fileID: 5867322863960311526, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
       propertyPath: speed
       value: 0.4

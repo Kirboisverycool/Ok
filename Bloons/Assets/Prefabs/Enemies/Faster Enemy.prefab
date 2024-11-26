@@ -16,9 +16,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Faster Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3353781130976541740, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -2432090755550338912, guid: 4aa4a66411dd75c46b220cd674d6eafe, type: 3}
     - target: {fileID: 5867322863960311526, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
       propertyPath: speed
-      value: 2
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 9027240394253478943, guid: 526ea35e88ace2b429f94ba7a785a6eb, type: 3}
       propertyPath: m_RootOrder
